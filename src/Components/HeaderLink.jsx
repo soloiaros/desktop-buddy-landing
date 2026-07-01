@@ -1,7 +1,9 @@
+import { Link } from 'react-router';
+
 export default function HeaderLink (title, href) {
     return (
-        <a href={href}>
+        <Link to={href}>
             {title}
-        </a>
+        </Link>
     )
 }

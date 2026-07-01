@@ -1,5 +1,6 @@
 import './App.css'
 import HeaderLink from '../Components/HeaderLink'
+import { Outlet } from 'react-router'
 
 function App() {
 
@@ -9,6 +10,9 @@ function App() {
       <HeaderLink title="shop" href="#shop" />
       <HeaderLink title="cart" href="#cart" />
     </header>
+    <Outlet />
+    <footer>
+    </footer>
 
     </>
   )
