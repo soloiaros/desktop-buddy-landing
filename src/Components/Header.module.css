@@ -4,4 +4,30 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 0;
+  position: relative
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 3rem;
+}
+
+.logoLink {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.logo {
+  width: 1.5rem;
+  height: auto;
 }
