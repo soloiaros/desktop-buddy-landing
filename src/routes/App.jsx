@@ -1,4 +1,3 @@
-import './App.css'
 import HeaderLink from '../Components/HeaderLink'
 import { Outlet } from 'react-router'
 

@@ -10,19 +10,19 @@ import Homepage from './routes/Homepage.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: App,
+    element: <App />,
     children: [
       {
         index: true,
-        element: Homepage,
-      }
+        element: <Homepage />,
+      },
       {
         path: 'shop',
-        element: Shop,
+        element: <Shop />,
       },
       {
         path: 'cart',
-        element: Cart,
+        element: <Cart />,
       }
     ]
   },
