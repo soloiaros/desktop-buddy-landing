@@ -7,7 +7,8 @@
   border: 2px solid var(--text);
   border-radius: 4px;
   background-color: var(--card-bg);
-  padding: 1rem
+  padding: 1rem;
+  justify-content: space-between;
 }
 
 .image-container {
@@ -48,4 +49,5 @@ button {
   color: var(--card-bg);
   width: 100%;
   font-weight: 800;
+  justify-self: flex-start;
 }

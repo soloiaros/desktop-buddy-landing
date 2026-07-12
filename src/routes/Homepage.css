@@ -3,6 +3,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  gap: 150px;
 }
 
 .hero {
@@ -29,6 +30,7 @@ section {
   text-wrap: balance;
   width: min-content;
   line-height: 0.75;
+  font-family: var(--hero);
 }
 
 .headline h1 {
@@ -43,6 +45,44 @@ section {
   img {
     width: 100%;
   }
+}
+
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -10vw;
+  background-image: url('cloud-1.png'), url('cloud-2.png');
+  background-position: left top, right bottom;
+  width: 80vw;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 200px, 200px;
+}
+
+.hero p {
+  width: 60%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 5rem;
+  right: 5rem;
+  height: 2px;
+  bottom: -3.5rem;
+  background-color: black;
+}
+
+.hero .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2rem;
 }
 
 section.offers {

@@ -1,0 +1,29 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.cards-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+span:first-of-type {
+  position: absolute;
+  top: 50%;
+  left: -2rem;
+}
+
+span:last-of-type {
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+}
+
+span {
+  cursor: pointer;
+  font-size: 2rem;
+}
