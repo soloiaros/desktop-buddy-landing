@@ -2,13 +2,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: auto;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
 }
 
 section {
-  max-width: 60%;
+  width: min(60%, 100%);
+  margin-inline: auto;
   display: grid;
-  justify-content: center;
+  justify-items: center;
 }
 
 .headline {
@@ -19,13 +24,27 @@ section {
   align-items: center;
 }
 
-h1 {
-  font-size: calc(-2rem + 20vw);
-  text-wrap-style: pretty;
+.hero h1 {
+  font-size: clamp(2.5rem, 10vw, 7rem);
+  text-wrap: balance;
   width: min-content;
-  line-height: 0.75
+  line-height: 0.75;
 }
 
-.image-container {
+.headline h1 {
+  margin: 0;
+}
 
+.hero .image-container {
+  width: 50%;
+  object-fit: contain;
+  margin-top: -5.5rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+section.offers {
+  width: min(80%, 100%);
 }

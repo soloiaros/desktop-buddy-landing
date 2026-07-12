@@ -13,7 +13,7 @@ export default function Homepage() {
                     <img src="/hero-img.png" alt="Tiny Mike" />
                 </div>
                 <div className="text-container">
-                    <h1>Meet your perfect desk buddy.</h1>
+                    <h2>Meet your perfect desk buddy.</h2>
                     <p>Need a disposable friend? An interlocutor? A study buddy? Tiny Mike is all you can ask for and more.</p>
                 </div>
             </section>

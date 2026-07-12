@@ -1,0 +1,51 @@
+.card-standard {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid var(--text);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  padding: 1rem
+}
+
+.image-container {
+  width: 100%;
+  border-radius: inherit;
+  background: var(--card);
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin: 0;
+  font-family: var(--heading);
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+
+.price-tag {
+  font-family: var(--revert);
+}
+
+p {
+  line-height: 1;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  background-color: var(--text-h);
+  color: var(--card-bg);
+  width: 100%;
+  font-weight: 800;
+}

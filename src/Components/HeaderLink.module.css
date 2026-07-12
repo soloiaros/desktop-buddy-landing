@@ -1,0 +1,10 @@
+a {
+  text-decoration: none;
+  padding-block: 0.25rem;
+  padding-inline: 1rem;
+  background-color: var(--card-bg);
+  color: var(--text);
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 2px solid var(--text);
+}
