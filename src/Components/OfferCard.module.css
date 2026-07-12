@@ -51,3 +51,22 @@ button {
   font-weight: 800;
   justify-self: flex-start;
 }
+
+.card-store {
+  composes: card-standard;
+}
+
+.dial {
+  display: flex;
+  color: var(--text);
+  justify-content: space-between;
+  width: 70%;
+  border: 1px solid var(--text);
+  align-items: baseline;
+}
+
+.dial > div {
+  width: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
