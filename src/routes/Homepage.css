@@ -39,8 +39,12 @@ section {
 
 .hero .image-container {
   width: 50%;
+  transform-origin: center center;
+  transform: translateY(2rem) scale(1.5);
   object-fit: contain;
   margin-top: -5.5rem;
+  animation: image-settle linear both;
+  animation-timeline: --hero;
 
   img {
     width: 100%;
@@ -49,6 +53,8 @@ section {
 
 .hero {
   position: relative;
+  view-timeline-name: --hero;
+  view-timeline-axis: block;
 }
 
 .hero::before {
@@ -59,9 +65,12 @@ section {
   background-image: url('cloud-1.png'), url('cloud-2.png');
   background-position: left top, right bottom;
   width: 80vw;
+  display: inline-block;
   height: 100px;
   background-repeat: no-repeat;
   background-size: 200px, 200px;
+  animation: clouds-settle linear both;
+  animation-timeline: --hero;
 }
 
 .hero p {
@@ -87,4 +96,30 @@ section {
 
 section.offers {
   width: min(80%, 100%);
+}
+
+@keyframes image-settle {
+  from {
+    transform: translateY(2rem) scale(1.5);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes clouds-settle {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: translateX(0) scale(1.5);
+  }
+}
+
+@supports not (animation-timeline: --hero) {
+  .hero .image-container,
+  .hero::before {
+    transform: none;
+    animation: none;
+  }
 }
