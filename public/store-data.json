@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Standard Edition",
+        "description": "All yours.",
+        "price": "$79.99",
+        "slug": "standard-item"
+    },
+    {
+        "id": 2,
+        "name": "Input Set",
+        "description": "In case you've lost the default one (or have 4 arms).",
+        "price": "$19.99",
+        "slug": "input-set"
+    },
+    {
+        "id": 3,
+        "name": "Floppy Disks (set of 5)",
+        "description": "Some empty. Some not.",
+        "price": "$9.99",
+        "slug": "floppy-disks"
+    }
+]
