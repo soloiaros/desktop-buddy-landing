@@ -1,17 +1,25 @@
 import styles from './OfferCard.module.css'
-import { useState } from 'react'
 import { useNavigate } from 'react-router';
 
-export default function OfferCard({ type="standard", title, priceTag, description, src, buttonText="Learn more" }) {
-    const [amountInCart, setAmountInCart] = useState(0);
+export default function OfferCard({ type="standard", title, priceTag, description, src, buttonText="Learn more", setCartItems=null, cartItems=null }) {
     const navigate = useNavigate();
 
     const handleIncreaseQuantity = () => {
-        setAmountInCart(amountInCart + 1);
+        if (setCartItems) {
+            setCartItems(prevItems => ({
+                ...prevItems,
+                [title]: (prevItems[title] || 0) + 1,
+            }))
+        }
     }
 
     const handleDecreaseQuantity = () => {
-        setAmountInCart(amountInCart - 1);
+        if (setCartItems) {
+            setCartItems(prevItems => ({
+                ...prevItems,
+                [title]: (prevItems[title] || 0) - 1,
+            }))
+        }
     }
 
     const handleStoreNavigation = () => {
@@ -31,11 +39,11 @@ export default function OfferCard({ type="standard", title, priceTag, descriptio
             {type === 'standard' ?
                 <button onClick={handleStoreNavigation}>{buttonText}</button>
                 :
-                amountInCart <= 0 ? 
+                (cartItems[title] || 0) <= 0 ? 
                     <button onClick={handleIncreaseQuantity}>{buttonText}</button> 
                     : <div className={styles.dial}>
                         <div onClick={handleDecreaseQuantity}>-</div>
-                        <p>{amountInCart}</p>
+                        <p>{cartItems[title] || 0}</p>
                         <div onClick={handleIncreaseQuantity}>+</div>
                     </div>
 }
