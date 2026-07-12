@@ -1,4 +1,5 @@
 import HeaderLink from '../Components/HeaderLink'
+import './App.css'
 import { Outlet } from 'react-router'
 
 function App() {
