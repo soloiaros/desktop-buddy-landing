@@ -1,10 +1,11 @@
 import { useState } from "react";
+import style from './CardCarousel.module.css'
 
 export default function CardCarousel({ cards=[], title }) {
     const [cardId, setCardId] = useState(0);
 
     const handleScrollBack = () => {
-        setCardId(cardId === 0 ? cards.length : cardId - 1);
+        setCardId(cardId === 0 ? cards.length - 1 : cardId - 1);
     }
 
     const handleScrollForward = () => {
@@ -12,15 +13,15 @@ export default function CardCarousel({ cards=[], title }) {
     }
 
     return (
-        <div>
+        <div className={style.carousel}>
             <h2>{title}</h2>
-            <div className="cards-container">
-                {cards.at(cardId === 0 ? cards.length : cardId - 1)}
+            <div className={style["cards-container"]}>
+                {cards.at(cardId === 0 ? cards.length - 1 : cardId - 1)}
                 {cards.at(cardId)}
                 {cards.at((cardId + 1) % cards.length)}
             </div>
-            <button onClick={handleScrollBack}>{`<`}</button>
-            <button onClick={handleScrollForward}>{`>`}</button>
+            <span onClick={handleScrollBack}>{`<`}</span>
+            <span onClick={handleScrollForward}>{`>`}</span>
         </div>
     )
 }
