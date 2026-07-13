@@ -7,7 +7,7 @@ function App() {
   const [cartItems, setCartItems] = useState({});
 
   useEffect(() => {
-    fetch('./store-data.json')
+    fetch('/store-data.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch store items from database.');

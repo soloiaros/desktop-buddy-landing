@@ -62,7 +62,7 @@ section {
   position: absolute;
   top: 10%;
   left: -10vw;
-  background-image: url('cloud-1.png'), url('cloud-2.png');
+  background-image: url('/cloud-1.png'), url('/cloud-2.png');
   background-position: left top, right bottom;
   width: 80vw;
   display: inline-block;

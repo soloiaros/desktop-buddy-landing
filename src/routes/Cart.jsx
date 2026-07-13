@@ -40,7 +40,7 @@ export default function Cart() {
                             title={item.name} 
                             priceTag={item.price} 
                             description={item.description} 
-                            src={`./${item.slug}.png`}
+                            src={`/${item.slug}.png`}
                             buttonText="Add to Cart"
                         />
                     ))

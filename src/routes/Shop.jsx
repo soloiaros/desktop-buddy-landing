@@ -39,7 +39,7 @@ export default function Shop() {
                             title={item.name} 
                             priceTag={item.price} 
                             description={item.description} 
-                            src={`./${item.slug}.png`}
+                            src={`/${item.slug}.png`}
                             buttonText={item.buttonText || "Add to Cart"}
                         />
                     ))
